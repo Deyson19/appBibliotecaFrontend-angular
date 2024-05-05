@@ -11,6 +11,8 @@ import {
   LayoutPageComponent,
   UpsertPrestamoPageComponent,
 } from './pages/';
+import { MaterialModule } from './material/material.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,13 @@ import {
     LayoutPageComponent,
     UpsertPrestamoPageComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+    SharedModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

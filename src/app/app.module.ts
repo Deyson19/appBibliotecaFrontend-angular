@@ -1,20 +1,27 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+//MyApp
+import { AppComponent } from './app.component';
+import {
+  ListaPageComponent,
+  PrestamoPageComponent,
+  LayoutPageComponent,
+  UpsertPrestamoPageComponent,
+} from './pages/';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ListaPageComponent,
+    PrestamoPageComponent,
+    LayoutPageComponent,
+    UpsertPrestamoPageComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

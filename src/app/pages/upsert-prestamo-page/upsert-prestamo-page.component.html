@@ -1,1 +1,66 @@
-<p>upsert-prestamo-page works!</p>
+<div class="card mt-3">
+  <div class="card-header">
+    <h3 class="text-success text-center">Crear Un prestamo</h3>
+  </div>
+  <div class="card-body">
+    <form (ngSubmit)="crearPrestamo()" class="example-form" [formGroup]="form">
+      <div class="d-flex justify-content-between">
+        <div class="input-group mb-3">
+          <mat-form-field class="example-full-width">
+            <mat-label>ISBN</mat-label>
+            <input
+              type="text"
+              formControlName="isbn"
+              matInput
+              placeholder="ISBN"
+            />
+          </mat-form-field>
+          <span
+            *ngIf="form.get('isbn')?.invalid && form.get('isbn')?.touched"
+            class="text-danger"
+          >
+            {{ errorMessage | uppercase }}
+          </span>
+        </div>
+        <div class="input-group mb-3">
+          <mat-form-field class="example-full-width">
+            <mat-label>Identificacion del Usuario</mat-label>
+            <input
+              type="text"
+              formControlName="identificacionUsuario"
+              matInput
+              placeholder="Identificacion"
+            />
+          </mat-form-field>
+          <span
+            *ngIf="
+              form.get('identificacionUsuario')?.invalid &&
+              form.get('identificacionUsuario')?.touched
+            "
+            class="text-danger"
+          >
+            {{ errorMessage | uppercase }}
+          </span>
+        </div>
+      </div>
+      <div class="mb-3">
+        <mat-label>Tipo de Usuario</mat-label>
+        <select class="form-select" formControlName="tipoUsuarioId">
+          <option *ngFor="let item of tiposUsuario" [value]="item.id">
+            {{ item.nombre }}
+          </option>
+        </select>
+      </div>
+      <div class="d-grid gap-2">
+        <button
+          type="submit"
+          class="btn btn-success btn-block btn-lg"
+          [ngClass]="!form.valid ? 'disabled' : 'active'"
+        >
+          Guardar
+          <i class="fas fa-save fa-beat-fade"></i>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

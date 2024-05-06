@@ -14,6 +14,7 @@ import {
 } from './pages/';
 import { MaterialModule } from './material/material.module';
 import { SharedModule } from './shared/shared.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { SharedModule } from './shared/shared.module';
     MaterialModule,
     SharedModule,
     HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -15,6 +15,8 @@ import {
 import { MaterialModule } from './material/material.module';
 import { SharedModule } from './shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
+import { TipoUsuarioPipe } from './pipes/tipo-usuario.pipe';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     PrestamoPageComponent,
     LayoutPageComponent,
     UpsertPrestamoPageComponent,
+    ConfirmDialogComponent,
+    TipoUsuarioPipe,
   ],
   imports: [
     BrowserModule,

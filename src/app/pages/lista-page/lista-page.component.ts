@@ -41,7 +41,7 @@ export class ListaPageComponent implements OnInit {
       },
       (error: HttpErrorResponse) => {
         console.log({ error });
-        this.displaySnackbar(error.message, 5000);
+        this.displaySnackbar('No se pudo realizar la petición', 5000);
       }
     );
   }

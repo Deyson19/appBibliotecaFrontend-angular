@@ -1,8 +1,9 @@
-<h1 class="text-center text-white">Listado de Prestamos en la biblioteca</h1>
+<h1 class="text-center text-black">Listado de Prestamos en la biblioteca</h1>
 <mat-divider></mat-divider>
-<div class="p-3 border-3 shadow-sm">
+<div class="m-5 border-3 shadow-sm">
   <div class="mat-elevation-z8">
     <div class="table-responsive">
+      <h2 class="text-center text-primary">Listado de Prestamos</h2>
       <table class="table table-primary">
         <thead>
           <tr>
@@ -27,15 +28,11 @@
               <button
                 mat-icon-button
                 color="primary"
-                (click)="hacerLog(item.id.toString())"
+                [routerLink]="['detalle/', item.id]"
               >
                 <mat-icon>visibility</mat-icon>
               </button>
-              <button
-                mat-icon-button
-                color="warn"
-                (click)="hacerLog(item.id.toString())"
-              >
+              <button mat-icon-button color="warn" (click)="eliminar(item.id)">
                 <mat-icon>delete</mat-icon>
               </button>
             </td>

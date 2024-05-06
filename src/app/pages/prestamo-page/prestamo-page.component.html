@@ -1,1 +1,37 @@
-<p>prestamo-page works!</p>
+<h1 class="text-center">Ver detalles de un préstamo</h1>
+
+<mat-card *ngIf="prestamo">
+  <mat-card-header>
+    <div mat-card-title class="mx-auto">
+      <h3 class="text-success text-center">Detalle del préstamo</h3>
+    </div>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="row">
+      <div class="col-6">
+        <img
+          mat-card-image
+          [src]="imagenLibro"
+          class="card-img img-thumbnail"
+          alt="Imagen que muestra unos libros"
+        />
+        <span class="text-sm-start">Imagen tomada de {{ imagenLibro }} </span>
+      </div>
+      <div class="col-6">
+        <h3 class="text-primary">ISBN</h3>
+        {{ prestamo.isbn }}
+        <h3 class="text-primary">Identificación del Usuario</h3>
+        {{ prestamo.identificacionUsuario }}
+        <h3 class="text-primary">Fecha de Devolución</h3>
+        {{ prestamo.fechaMaximaDevolucion }}
+        <h3 class="text-primary">Tipo de Usuario</h3>
+        {{ prestamo.tipoUsuario | tipoUsuario }}
+      </div>
+    </div>
+  </mat-card-content>
+  <mat-card-actions align="end">
+    <button mat-raised-button color="warn" (click)="regresar()">
+      Regresar a la lista de Préstamos
+    </button>
+  </mat-card-actions>
+</mat-card>

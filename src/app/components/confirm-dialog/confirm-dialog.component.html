@@ -1,0 +1,18 @@
+<h1 class="text-danger text-center" mat-dialog-title>
+  ¿Estas seguro de esta operación?
+  <mat-icon>help</mat-icon>
+</h1>
+<div mat-dialog-content class="text-justify">
+  <p>Esta operación no se puede deshacer.</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()" class="btn btn-primary">No</button>
+  <button
+    mat-button
+    (click)="onConfirm()"
+    class="btn btn-danger"
+    cdkFocusInitial
+  >
+    Si
+  </button>
+</div>

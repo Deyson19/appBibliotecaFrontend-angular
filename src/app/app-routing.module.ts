@@ -22,6 +22,10 @@ const routes: Routes = [
         component: UpsertPrestamoPageComponent,
       },
       {
+        path: 'editar/:id',
+        component: UpsertPrestamoPageComponent,
+      },
+      {
         path: 'detalle/:id',
         component: PrestamoPageComponent,
       },

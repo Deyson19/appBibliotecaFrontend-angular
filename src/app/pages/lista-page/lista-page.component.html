@@ -32,6 +32,13 @@
               >
                 <mat-icon>visibility</mat-icon>
               </button>
+              <button
+                mat-icon-button
+                color="acent"
+                [routerLink]="['editar/', item.id]"
+              >
+                <mat-icon>edit</mat-icon>
+              </button>
               <button mat-icon-button color="warn" (click)="eliminar(item.id)">
                 <mat-icon>delete</mat-icon>
               </button>

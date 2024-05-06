@@ -1,9 +1,9 @@
 <div class="card mt-3">
   <div class="card-header">
-    <h3 class="text-success text-center">Crear Un prestamo</h3>
+    <h3 class="text-success text-center">{{ tituloFormulario }}</h3>
   </div>
   <div class="card-body">
-    <form (ngSubmit)="crearPrestamo()" class="example-form" [formGroup]="form">
+    <form (ngSubmit)="onSubmit()" class="example-form" [formGroup]="form">
       <div class="d-flex justify-content-between">
         <div class="input-group mb-3">
           <mat-form-field class="example-full-width">
@@ -57,7 +57,7 @@
           class="btn btn-success btn-block btn-lg"
           [ngClass]="!form.valid ? 'disabled' : 'active'"
         >
-          Guardar
+          {{ tituloBotonFormulario }}
           <i class="fas fa-save fa-beat-fade"></i>
         </button>
       </div>
